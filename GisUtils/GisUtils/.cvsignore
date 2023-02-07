@@ -1,0 +1,15 @@
+*.class
+.classpath
+.project
+.settings
+*.log
+*.bmp
+*.udl
+*.PNG
+Autonomous Library.txt
+*.cvsignore
+
+RuleredImage.png
+*.iml
+*.ipr
+*.iws
