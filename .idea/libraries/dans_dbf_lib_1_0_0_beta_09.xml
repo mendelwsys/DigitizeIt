@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="dans-dbf-lib-1.0.0-beta-09">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/dans-dbf-lib-1.0.0-beta-09.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

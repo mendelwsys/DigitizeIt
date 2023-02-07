@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="WINDOWS-1251" ?>
+<project>
+<configs>
+	<config>
+		<config-name>Project configuration</config-name>
+		<class-name>com.mwlib.app.ConfigApp</class-name>
+		<params>
+			<param Nm='HISTORY_MAX_SIZE' Val='10'/>
+			<appbuilder>SYSTEM</appbuilder>
+		</params>
+	</config>
+</configs>
+</project>

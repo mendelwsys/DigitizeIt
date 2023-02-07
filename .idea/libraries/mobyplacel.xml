@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="mobyplacel">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/mobyplace/multiplexer.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/mobyplace/utils.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

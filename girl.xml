@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="WINDOWS-1251" ?>
+<project>
+<storages>
+	<storage>
+		<storage-name>DigitizerStor4</storage-name>
+		<class-name>
+			com.mwlib.app.storages.mem.DigitizedStorage
+		</class-name>
+		<params>
+			<param RM_MARK='4'/>
+			<param PO_TRACE_FILE='.girl\DigitizerStor4.pth'/>
+		</params>
+	</storage>
+</storages>
+<filters>
+	<filter>
+		<filter-name>FDIGITIZER4</filter-name>
+		<class-name>
+			ru.ts.toykernel.filters.stream.NodeFilter
+		</class-name>
+		<params>
+			<param Val='DigitizerStor4'/>
+			<param RM_MARK='4'/>
+		</params>
+	</filter>
+</filters>
+<rules>
+	<rule>
+		<rule-name>RDIGITIZER4</rule-name>
+		<class-name>
+			com.mwlib.app.rules.DigitizerRule
+		</class-name>
+		<params>
+			<param HiRange='-1.0'/>
+			<param LowRange='-1.0'/>
+			<param ColorLine='ffababab'/>
+			<param ColorFill='ffffabab'/>
+			<param LineStyle='0'/>
+			<param LineThickness='1.0'/>
+			<param RM_MARK='4'/>
+		</params>
+	</rule>
+</rules>
+<metainfos>
+	<metainfo>
+		<metainfo-name>meta0</metainfo-name>
+		<class-name>
+			ru.ts.toykernel.pcntxt.MetaInfoBean
+		</class-name>
+		<params>
+			<param Nm='FORMAT VERSION' Val='ToyGIS 1.4'/>
+			<param major='1'/>
+			<param minor='4'/>
+			<param projname='Vectorizer'/>
+			<param boxColor='ff00ff00'/>
+			<param backColor='ff777777'/>
+			<param mapver='MapVer 1.0'/>
+			<param units='PIXELS'/>
+		</params>
+	</metainfo>
+</metainfos>
+<converters>
+	<converter>
+		<converter-name>ROT0</converter-name>
+		<class-name>
+			ru.ts.toykernel.converters.CrdConverterFactory$RotateConverter
+		</class-name>
+		<params>
+			<param matrix='1 0 0 1'/>
+		</params>
+	</converter>
+	<converter>
+		<converter-name>SCALE0</converter-name>
+		<class-name>
+			ru.ts.toykernel.converters.CrdConverterFactory$ScaledConverter
+		</class-name>
+		<params>
+			<param initscale='1 1'/>
+		</params>
+	</converter>
+	<converter>
+		<converter-name>SHIFT0</converter-name>
+		<class-name>
+			ru.ts.toykernel.converters.CrdConverterFactory$ShiftConverter
+		</class-name>
+		<params>
+			<param bindp='0 0'/>
+		</params>
+	</converter>
+	<converter>
+		<converter-name>SHIFT1</converter-name>
+		<class-name>
+			ru.ts.toykernel.converters.CrdConverterFactory$ShiftConverter
+		</class-name>
+		<params>
+			<param bindp='0 0'/>
+		</params>
+	</converter>
+	<converter>
+		<converter-name>APPCONVERTER</converter-name>
+		<class-name>
+			ru.ts.toykernel.converters.CrdConverterFactory$LinearConverterRSS
+		</class-name>
+		<params>
+			<converter>ROT0</converter>
+			<converter>SCALE0</converter>
+			<converter>SHIFT0</converter>
+		</params>
+	</converter>
+	<converter>
+		<converter-name>APPCONVERTER1</converter-name>
+		<class-name>
+			ru.ts.toykernel.converters.CrdConverterFactory$LinearConverterRSS
+		</class-name>
+		<params>
+			<converter>ROT0</converter>
+			<converter>SCALE0</converter>
+			<converter>SHIFT1</converter>
+		</params>
+	</converter>
+</converters>
+<storages>
+	<storage>
+		<storage-name>RASTER_0</storage-name>
+		<class-name>
+			com.mwlib.app.storages.raster.SingleRasterStorageN
+		</class-name>
+		<params>
+			<param rast='0'/>
+			<param pr0='0 0 0 0'/>
+			<param pr1='1000 1000 1000 1000'/>
+			<converter>APPCONVERTER</converter>
+			<param RESOLUTION='30.00'/>
+			<param imgpath='.\MAPDIR\girl.png'/>
+		</params>
+	</storage>
+	<storage>
+		<storage-name>DigitizerStor</storage-name>
+		<class-name>
+			com.mwlib.app.storages.mem.DigitizedStorage
+		</class-name>
+		<params>
+			<param PO_TRACE_FILE='.girl\DigitizerStor.pth'/>
+		</params>
+	</storage>
+	<storage>
+		<storage-name>MAIN_STORAGE</storage-name>
+		<class-name>
+			ru.ts.toykernel.storages.mem.NodeStorageImpl
+		</class-name>
+		<params>
+			<storage>RASTER_0</storage>
+			<storage>DigitizerStor</storage>
+		</params>
+	</storage>
+	<storage>
+		<storage-name>MAIN_STORAGE2</storage-name>
+		<class-name>
+			ru.ts.toykernel.storages.mem.NodeStorageImpl
+		</class-name>
+		<params>
+			<storage>DigitizerStor4</storage>
+		</params>
+	</storage>
+</storages>
+<layers>
+	<layer>
+		<layer-name>Digitizer layer4</layer-name>
+		<class-name>
+			com.mwlib.app.layers.DigitizerLayer
+		</class-name>
+		<params>
+			<param RM_MARK='4'/>
+			<param visible='true'/>
+			<filter>FDIGITIZER4</filter>
+			<rule>RDIGITIZER4</rule>
+			<storage>MAIN_STORAGE2</storage>
+			<param FNAME='girl'/>
+			<param TABFILE='.\MAPDIR\girl.tab'/>
+			<param TRANSLATE='false'/>
+			<param BLACKCOLOR='ffababab'/>
+			<param COLORNAME='COLOR'/>
+			<param WHITECOLOR='ffffffff'/>
+			<param ASSHAPEOBJECT='POLY_WITH_HOLES'/>
+			<param ATTRIBUTENAME='LAYER_NAME'/>
+			<param SQUARENAME='TOTGA'/>
+			<param ATTRIBUTE='имя слоя11'/>
+			<param FLATNESS='5.00000'/>
+			<param LAYER_NAME='layer name01'/>
+		</params>
+	</layer>
+</layers>
+<filters>
+	<filter>
+		<filter-name>FR</filter-name>
+		<class-name>
+			ru.ts.toykernel.filters.stream.NodeFilter
+		</class-name>
+		<params>
+			<param Val='RASTER_0'/>
+		</params>
+	</filter>
+	<filter>
+		<filter-name>FDIGITIZER</filter-name>
+		<class-name>
+			ru.ts.toykernel.filters.stream.NodeFilter
+		</class-name>
+		<params>
+			<param Val='DigitizerStor'/>
+		</params>
+	</filter>
+</filters>
+<rules>
+	<rule>
+		<rule-name>RRule0</rule-name>
+		<class-name>
+			com.mwlib.app.rules.SimpleRasterRuleN
+		</class-name>
+	</rule>
+	<rule>
+		<rule-name>RDIGITIZER</rule-name>
+		<class-name>
+			com.mwlib.app.rules.DigitizerRule
+		</class-name>
+		<params>
+			<param HiRange='-1.0'/>
+			<param LowRange='-1.0'/>
+			<param ColorLine='ff777777'/>
+			<param ColorFill='ff000000'/>
+			<param LineStyle='0'/>
+			<param LineThickness='1.0'/>
+		</params>
+	</rule>
+</rules>
+<layers>
+	<layer>
+		<layer-name>Raster layer</layer-name>
+		<class-name>
+			ru.ts.toykernel.drawcomp.layers.def.DrawOnlyLayer
+		</class-name>
+		<params>
+			<param visible='true'/>
+			<storage>MAIN_STORAGE</storage>
+			<filter>FR</filter>
+			<rule>RRule0</rule>
+		</params>
+	</layer>
+	<layer>
+		<layer-name>Digitizer layer</layer-name>
+		<class-name>
+			com.mwlib.app.layers.DigitizerLayer
+		</class-name>
+		<params>
+			<param visible='true'/>
+			<storage>MAIN_STORAGE</storage>
+			<filter>FDIGITIZER</filter>
+			<rule>RDIGITIZER</rule>
+		</params>
+	</layer>
+</layers>
+<projconts>
+	<projcont>
+		<projcont-name>Cont0</projcont-name>
+		<class-name>
+			ru.ts.toykernel.pcntxt.xml.XMLProjContext
+		</class-name>
+		<params>
+			<metainfo>meta0</metainfo>
+			<storage>MAIN_STORAGE</storage>
+			<layer>Raster layer</layer>
+			<layer>Digitizer layer</layer>
+		</params>
+	</projcont>
+	<projcont>
+		<projcont-name>Cont1</projcont-name>
+		<class-name>
+			ru.ts.toykernel.pcntxt.xml.XMLProjContext
+		</class-name>
+		<params>
+			<metainfo>meta0</metainfo>
+			<storage>MAIN_STORAGE2</storage>
+			<param VARCNT='5'/>
+			<layer>Digitizer layer4</layer>
+		</params>
+	</projcont>
+</projconts>
+<viewctrls>
+	<viewctrl>
+		<viewctrl-name>View1</viewctrl-name>
+		<class-name>
+			ru.ts.toykernel.gui.panels.ViewPicturePanel2
+		</class-name>
+		<params>
+			<param InitSz='1024 1024'/>
+			<converter>APPCONVERTER1</converter>
+			<projcont>Cont1</projcont>
+		</params>
+	</viewctrl>
+	<viewctrl>
+		<viewctrl-name>View0</viewctrl-name>
+		<class-name>
+			com.mwlib.app.gui.BindViewPicture
+		</class-name>
+		<params>
+			<param InitSz='1024 1024'/>
+			<converter>APPCONVERTER</converter>
+			<projcont>Cont0</projcont>
+			<viewctrl>View1</viewctrl>
+		</params>
+	</viewctrl>
+</viewctrls>
+<plugins>
+	<plugin>
+		<plugin-name>drivermod</plugin-name>
+		<class-name>
+			ru.ts.toykernel.plugins.defindrivers.DriverModule
+		</class-name>
+		<params>
+			<viewctrl>View0</viewctrl>
+			<param MOUSE_CURSOR='HAND_CURSOR'/>
+		</params>
+	</plugin>
+	<plugin>
+		<plugin-name>drawattreditor</plugin-name>
+		<class-name>
+			ru.ts.toykernel.plugins.styles.DefDrawAttrEditor
+		</class-name>
+		<params>
+			<viewctrl>View0</viewctrl>
+		</params>
+	</plugin>
+	<plugin>
+		<plugin-name>openraster</plugin-name>
+		<class-name>
+			com.mwlib.app.plugins.raster.OpenRModule
+		</class-name>
+		<params>
+			<viewctrl>View0</viewctrl>
+			<param PATH='.\MAPDIR\girl.png'/>
+		</params>
+	</plugin>
+	<plugin>
+		<plugin-name>digitizer</plugin-name>
+		<class-name>
+			com.mwlib.app.plugins.digitizer.DigitizerModuleExt
+		</class-name>
+		<params>
+			<viewctrl>View0</viewctrl>
+			<viewctrl>View1</viewctrl>
+			<appbuilder>SYSTEM</appbuilder>
+			<param BORDERTYPE='BORDER_ZERO'/>
+			<param MSIZE='3'/>
+			<param COLORDIST='25.00'/>
+			<param MEDIAN='1'/>
+			<param TURNPOLICY='POTRACE_TURNPOLICY_MINORITY'/>
+			<param TURDSIZE='0.18'/>
+			<param ALPHAMAX='1.00000'/>
+			<param OPTICURVE='true'/>
+			<param OPTTOLERANCE='0.20'/>
+			<param BPRINT='false'/>
+			<param RCOLOR='ffababab'/>
+		</params>
+	</plugin>
+	<plugin>
+		<plugin-name>export2shp</plugin-name>
+		<class-name>
+			com.mwlib.app.plugins.shp.ShapeExporterModule2
+		</class-name>
+		<params>
+			<layer>Digitizer layer</layer>
+			<storage>RASTER_0</storage>
+			<viewctrl>View1</viewctrl>
+			<appbuilder>SYSTEM</appbuilder>
+			<param PATHNAME='.\MAPDIR'/>
+			<param COMMONNAME='girl'/>
+			<param UNIONALL='false'/>
+		</params>
+	</plugin>
+	<plugin>
+		<plugin-name>median</plugin-name>
+		<class-name>
+			com.mwlib.app.plugins.median.MedianModule
+		</class-name>
+		<params>
+			<viewctrl>View0</viewctrl>
+		</params>
+	</plugin>
+	<plugin>
+		<plugin-name>savemod</plugin-name>
+		<class-name>
+			com.mwlib.app.plugins.svldproj.SaveProj
+		</class-name>
+		<params>
+			<viewctrl>View0</viewctrl>
+			<viewctrl>View1</viewctrl>
+			<appbuilder>SYSTEM</appbuilder>
+		</params>
+	</plugin>
+</plugins>
+<applications>
+	<application>
+		<application-name>App0</application-name>
+		<class-name>
+			ru.ts.toykernel.gui.apps2.SFViewer2
+		</class-name>
+		<params>
+			<viewctrl>View0</viewctrl>
+			<viewctrl>View1</viewctrl>
+			<plugin>drivermod</plugin>
+			<plugin>savemod</plugin>
+			<plugin>openraster</plugin>
+			<plugin>digitizer</plugin>
+			<plugin>drawattreditor</plugin>
+			<plugin>export2shp</plugin>
+		</params>
+	</application>
+</applications>
+</project>

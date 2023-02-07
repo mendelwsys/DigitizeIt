@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Digitized">
+    <output-path>$PROJECT_DIR$/bin/Digitized</output-path>
+    <root id="archive" name="Digitized.jar">
+      <element id="module-output" name="CommonUtils" />
+      <element id="module-output" name="Digitizer" />
+      <element id="module-output" name="GisUtils" />
+      <element id="module-output" name="GuiPlugIns" />
+      <element id="module-output" name="IToyKernel" />
+      <element id="module-output" name="ToyKernels" />
+      <element id="module-output" name="ToyGuiKernel" />
+      <element id="module-output" name="GuiResource" />
+      <element id="module-output" name="ShpProvider" />
+      <element id="module-output" name="DigitizeIt" />
+      <element id="module-output" name="Median" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/Digitizer/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

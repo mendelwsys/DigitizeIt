@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="WINDOWS-1251" ?>
+<project>
+<configs>
+	<config>
+		<config-name>Конфигурация проекта</config-name>
+		<class-name>
+			com.mwlib.app.ConfigApp
+		</class-name>
+		<params>
+			<param HISTORY_MAX_SIZE='10'/>
+			<appbuilder>SYSTEM</appbuilder>
+			<param START='ples.xml'/>
+			<param OPEN_HISTORY='girl.xml'/>
+		</params>
+	</config>
+</configs>
+</project>

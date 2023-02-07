@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="jtsl">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/jts/acme.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jts/jdom.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jts/jts-1.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jts/JTS_Test.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jts/jtsio-1.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jts/junit.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jts/xerces.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

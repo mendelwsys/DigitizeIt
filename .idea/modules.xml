@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CommonUtils/CommonUtils.iml" filepath="$PROJECT_DIR$/CommonUtils/CommonUtils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DigitizeIt.iml" filepath="$PROJECT_DIR$/DigitizeIt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Digitizer/Digitizer.iml" filepath="$PROJECT_DIR$/Digitizer/Digitizer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GisUtils/GisUtils.iml" filepath="$PROJECT_DIR$/GisUtils/GisUtils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GuiPlugIns/GuiPlugIns.iml" filepath="$PROJECT_DIR$/GuiPlugIns/GuiPlugIns.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GuiResource/GuiResource.iml" filepath="$PROJECT_DIR$/GuiResource/GuiResource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IToyKernel/IToyKernel.iml" filepath="$PROJECT_DIR$/IToyKernel/IToyKernel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Median/Median.iml" filepath="$PROJECT_DIR$/Median/Median.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ShpProvider/ShpProvider.iml" filepath="$PROJECT_DIR$/ShpProvider/ShpProvider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ToyGuiKernel/ToyGuiKernel.iml" filepath="$PROJECT_DIR$/ToyGuiKernel/ToyGuiKernel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ToyKernels/ToyKernels.iml" filepath="$PROJECT_DIR$/ToyKernels/ToyKernels.iml" />
+    </modules>
+  </component>
+</project>
+

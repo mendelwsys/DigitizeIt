@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="WINDOWS-1251" ?>
+<project>
+<storages>
+	<storage>
+		<storage-name>DigitizerStor$V$</storage-name>
+		<class-name>com.mwlib.app.storages.mem.DigitizedStorage</class-name>
+		<params>
+			<param Nm="RM_MARK" Val="$V$"/>
+		</params>
+	</storage>
+</storages>
+<filters>
+	<filter>
+		<filter-name>FDIGITIZER$V$</filter-name>
+		<class-name>
+			ru.ts.toykernel.filters.stream.NodeFilter
+		</class-name>
+		<params>
+			<param Val="DigitizerStor$V$"/>
+			<param Nm="RM_MARK" Val="$V$"/>
+		</params>
+	</filter>
+</filters>
+<rules>
+	<rule>
+		<rule-name>RDIGITIZER$V$</rule-name>
+		<class-name>com.mwlib.app.rules.DigitizerRule</class-name>
+		<params>
+			<param Nm="HiRange" Val="-1.0"/>
+			<param Nm="LowRange" Val="-1.0"/>
+			<param Nm="ColorLine" Val="FF777777"/>
+			<param Nm="ColorFill" Val="FF000000"/>
+			<param Nm="LineStyle" Val="0"/>
+			<param Nm="LineThickness" Val="1"/>
+			<param Nm="RM_MARK" Val="$V$"/>
+		</params>
+	</rule>
+</rules>
+<layers>
+	<layer>
+		<layer-name>Слой Оцифровки$V$</layer-name>
+		<class-name>com.mwlib.app.layers.DigitizerLayer</class-name>
+		<param Nm="RM_MARK" Val="$V$"/>
+		<param Nm="visible" Val="true"/>
+		<filter>FDIGITIZER$V$</filter>
+		<rule>RDIGITIZER$V$</rule>
+	</layer>
+</layers>
+</project>

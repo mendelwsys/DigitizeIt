@@ -1,0 +1,16 @@
+!table
+!version 300
+!charset WindowsCyrillic
+
+Definition Table
+  File "les.bmp"
+  Type "RASTER"
+  (101.059429079454,56.3348178430771) (0,0) Label "Point 1",
+  (101.128146218441,56.3348178430771) (1000,0) Label "Point 2",
+  (101.128146218441,56.2901820236871) (1000,1180) Label "Point 3",
+  (101.059429079454,56.2901820236871) (0,1180) Label "Point 4"
+CoordSys Earth Projection 1,104
+Units "degree"
+RasterStyle 4 1
+RasterStyle 7 0
+RasterStyle 8 255
