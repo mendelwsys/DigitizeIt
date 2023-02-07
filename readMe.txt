@@ -5,6 +5,7 @@ The program is intended for automatic vectorization of raster images and their s
 Developed on the basis of the core of the project of its own GIS system (ToyGis).
 At startup, the application is built from functional programming blocks based on the xml configuration.
 Has two language interfaces, English (default) and Russian.
+You need java!x32! to run version 7 or 8 for Windows only
 
 Documentation is in the DOC(S) folder (in Russian)
 Raster samples for digitization are located in the MAPDIR folder.
